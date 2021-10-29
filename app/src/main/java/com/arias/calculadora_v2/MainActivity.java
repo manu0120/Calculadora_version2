@@ -3,6 +3,7 @@ package com.arias.calculadora_v2;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -57,5 +58,12 @@ public class MainActivity extends AppCompatActivity {
 
         tvResultado=(TextView) findViewById(R.id.tvResultado);
 
+
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                tvResultado.setText(tvResultado+"1");
+            }
+        });
     }
 }
