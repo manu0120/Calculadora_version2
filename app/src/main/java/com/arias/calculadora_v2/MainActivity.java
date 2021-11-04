@@ -32,8 +32,8 @@ public class MainActivity extends AppCompatActivity {
     public TextView tvResultado;
 
     //explicacion de porque se declaran asi los float: https://imgur.com/a/Mvm8rs7
-    //float numero1 = 0.0f;
-    //float numero2 = 0.0f;
+    float numero1 = 0.0f;
+    float numero2 = 0.0f;
     String operacion = "";
     float dato = 0.0f;
 
@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
 
         tvResultado=(TextView) findViewById(R.id.tvResultado);
 
-
+        /*
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -77,6 +77,8 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        */
+
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -185,5 +187,26 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    public void limpiarResultado(View view) {
+        tvResultado.setText("0");
+        dato=0.0f;
+        operacion="";
+    }
+
+    public void pulsarUno(View view) {
+
+        dato=Float.parseFloat(tvResultado.getText().toString());
+        if (dato==0.0f){
+            tvResultado.setText("1");
+        }else{
+            tvResultado.setText(tvResultado.getText() + "1");
+        }
+
+    }
+    public void operacionDividir(View view){
+        numero1=Float.parseFloat(tvResultado.getText().toString());
+        tvResultado.setText("0");
     }
 }

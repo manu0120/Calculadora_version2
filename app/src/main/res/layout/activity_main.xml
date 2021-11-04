@@ -79,6 +79,7 @@
         android:layout_height="48dp"
         android:text="C"
 
+        android:onClick="limpiarResultado"
         app:layout_constraintBottom_toTopOf="@id/guidelineh2"
         app:layout_constraintEnd_toStartOf="@id/guidelinev2"
         app:layout_constraintStart_toEndOf="@id/guidelinev1"
@@ -100,6 +101,8 @@
         android:layout_width="58dp"
         android:layout_height="51dp"
         android:text="/"
+
+        android:onClick="operacionDividir"
         app:layout_constraintTop_toTopOf="@id/guidelineh1"
         app:layout_constraintBottom_toBottomOf="@id/guidelineh2"
         app:layout_constraintStart_toStartOf="@id/guidelinev4"
@@ -191,6 +194,8 @@
         android:layout_width="73dp"
         android:layout_height="49dp"
         android:text="1"
+
+        android:onClick="pulsarUno"
         app:layout_constraintTop_toTopOf="@id/guidelineh4"
         app:layout_constraintBottom_toBottomOf="@id/guidelineh5"
         app:layout_constraintStart_toStartOf="@id/guidelinev1"
