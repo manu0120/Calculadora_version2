@@ -31,6 +31,12 @@ public class MainActivity extends AppCompatActivity {
 
     public TextView tvResultado;
 
+    //explicacion de porque se declaran asi los float: https://imgur.com/a/Mvm8rs7
+    //float numero1 = 0.0f;
+    //float numero2 = 0.0f;
+    String operacion = "";
+    float dato = 0.0f;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,61 +68,121 @@ public class MainActivity extends AppCompatActivity {
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                tvResultado.setText(tvResultado+"1");
+                dato=Float.parseFloat(tvResultado.getText().toString());
+                if (dato==0.0f){
+                    tvResultado.setText("1");
+                }else{
+                    tvResultado.setText(tvResultado.getText() + "1");
+                }
+
             }
         });
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                tvResultado.setText(tvResultado+"2");
+                dato=Float.parseFloat(tvResultado.getText().toString());
+                if (dato==0.0f){
+                    tvResultado.setText("2");
+                }else{
+                    tvResultado.setText(tvResultado.getText() + "2");
+                }
+
+
             }
         });
         btn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                tvResultado.setText(tvResultado+"3");
+                dato=Float.parseFloat(tvResultado.getText().toString());
+                if (dato==0.0f){
+                    tvResultado.setText("3");
+                }else{
+                    tvResultado.setText(tvResultado.getText() + "3");
+                }
+
             }
         });
         btn4.setOnClickListener(new View.OnClickListener() {
-            @Override
             public void onClick(View view) {
-                tvResultado.setText(tvResultado+"4");
+                dato=Float.parseFloat(tvResultado.getText().toString());
+                if (dato==0.0f){
+                    tvResultado.setText("4");
+                }else{
+                    tvResultado.setText(tvResultado.getText() + "4");
+                }
+
             }
         });
         btn5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                tvResultado.setText(tvResultado+"5");
+                dato=Float.parseFloat(tvResultado.getText().toString());
+                if (dato==0.0f){
+                    tvResultado.setText("5");
+                }else{
+                    tvResultado.setText(tvResultado.getText() + "5");
+                }
+
             }
         });
         btn6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                tvResultado.setText(tvResultado+"6");
+                dato=Float.parseFloat(tvResultado.getText().toString());
+                if (dato==0.0f){
+                    tvResultado.setText("6");
+                }else{
+                    tvResultado.setText(tvResultado.getText() + "6");
+                }
+
             }
         });
         btn7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                tvResultado.setText(tvResultado+"7");
+                dato=Float.parseFloat(tvResultado.getText().toString());
+                if (dato==0.0f){
+                    tvResultado.setText("7");
+                }else{
+                    tvResultado.setText(tvResultado.getText() + "7");
+                }
+
             }
         });
         btn8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                tvResultado.setText(tvResultado+"8");
+                dato=Float.parseFloat(tvResultado.getText().toString());
+                if (dato==0.0f){
+                    tvResultado.setText("8");
+                }else{
+                    tvResultado.setText(tvResultado.getText() + "8");
+                }
+
             }
         });
         btn9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                tvResultado.setText(tvResultado+"9");
+                dato=Float.parseFloat(tvResultado.getText().toString());
+                if (dato==0.0f){
+                    tvResultado.setText("9");
+                }else{
+                    tvResultado.setText(tvResultado.getText() + "9");
+                }
+
             }
         });
         btn0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                tvResultado.setText(tvResultado+"0");
+                dato=Float.parseFloat(tvResultado.getText().toString());
+                if (dato==0.0f){
+                    tvResultado.setText("0");
+                }else{
+                    tvResultado.setText(tvResultado.getText() + "0");
+                }
+
             }
         });
     }
