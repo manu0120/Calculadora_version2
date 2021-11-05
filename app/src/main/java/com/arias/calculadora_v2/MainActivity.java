@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
     float numero2 = 0.0f;
     String operacion = "";
     float dato = 0.0f;
+    float resultado=0.0f;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,7 +83,11 @@ public class MainActivity extends AppCompatActivity {
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //comprobamos lo que hay almacenado en tvResultado
                 dato=Float.parseFloat(tvResultado.getText().toString());
+                /*Si en el resultado no hay nigun numero o hay un 0 se pone el que se haya clickado. Si ya
+                hay un numero, se añade el de la tecla pulsada.
+                 */
                 if (dato==0.0f){
                     tvResultado.setText("2");
                 }else{
@@ -207,6 +212,46 @@ public class MainActivity extends AppCompatActivity {
     }
     public void operacionDividir(View view){
         numero1=Float.parseFloat(tvResultado.getText().toString());
+        /*se resetea el tvResultado paraque se almacene solo a partir de ahora la parte que va
+         despues del operando*/
         tvResultado.setText("0");
+        operacion="/";
+    }
+    public void operacionSumar(View view){
+        numero1=Float.parseFloat(tvResultado.getText().toString());
+        tvResultado.setText("0");
+        operacion="+";
+    }
+    public void operacionMultiplicar(View view){
+        numero1=Float.parseFloat(tvResultado.getText().toString());
+        tvResultado.setText("0");
+        operacion="*";
+    }
+    public void operacionRestar(View view){
+        numero1=Float.parseFloat(tvResultado.getText().toString());
+        tvResultado.setText("0");
+        operacion="-";
+    }
+    public void operacionIgual(View view){
+        numero2=Float.parseFloat(tvResultado.getText().toString());
+        tvResultado.setText("0");
+        switch (operacion){
+            case "/":
+                resultado=numero1/numero2;
+                tvResultado.setText(String.valueOf(resultado));
+                break;
+            case "*":
+                resultado=numero1*numero2;
+                tvResultado.setText(String.valueOf(resultado));
+                break;
+            case "+":
+                resultado=numero1+numero2;
+                tvResultado.setText(String.valueOf(resultado));
+                break;
+            case "-":
+                resultado=numero1-numero2;
+                tvResultado.setText(String.valueOf(resultado));
+                break;
+        }
     }
 }

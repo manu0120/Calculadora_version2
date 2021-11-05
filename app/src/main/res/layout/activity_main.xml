@@ -144,6 +144,8 @@
         android:layout_width="62dp"
         android:layout_height="44dp"
         android:text="*"
+        android:onClick="operacionMultiplicar"
+
         app:layout_constraintTop_toTopOf="@id/guidelineh2"
         app:layout_constraintBottom_toBottomOf="@id/guidelineh3"
         app:layout_constraintStart_toStartOf="@id/guidelinev4"
@@ -184,6 +186,8 @@
         android:layout_width="59dp"
         android:layout_height="43dp"
         android:text="+"
+
+        android:onClick="operacionSumar"
         app:layout_constraintTop_toTopOf="@id/guidelineh3"
         app:layout_constraintBottom_toBottomOf="@id/guidelineh4"
         app:layout_constraintStart_toStartOf="@id/guidelinev4"
@@ -226,6 +230,7 @@
         android:layout_width="64dp"
         android:layout_height="46dp"
         android:text="-"
+        android:onClick="operacionRestar"
         app:layout_constraintTop_toTopOf="@id/guidelineh4"
         app:layout_constraintBottom_toBottomOf="@id/guidelineh5"
         app:layout_constraintStart_toStartOf="@id/guidelinev4"
@@ -256,6 +261,8 @@
         android:layout_width="57dp"
         android:layout_height="46dp"
         android:text="="
+        android:onClick="operacionIgual"
+
         app:layout_constraintTop_toTopOf="@id/guidelineh5"
         app:layout_constraintBottom_toBottomOf="@id/guidelineh6"
         app:layout_constraintStart_toStartOf="@id/guidelinev4"
