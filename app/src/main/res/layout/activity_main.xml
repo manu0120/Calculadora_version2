@@ -90,6 +90,8 @@
         android:layout_width="161dp"
         android:layout_height="53dp"
         android:text="DEL"
+
+        android:onClick="borrarNumero"
         app:layout_constraintTop_toTopOf="@id/guidelineh1"
         app:layout_constraintBottom_toBottomOf="@id/guidelineh2"
         app:layout_constraintStart_toStartOf="@id/guidelinev2"

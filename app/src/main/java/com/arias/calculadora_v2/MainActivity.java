@@ -65,6 +65,8 @@ public class MainActivity extends AppCompatActivity {
 
         tvResultado=(TextView) findViewById(R.id.tvResultado);
 
+        //metodo que resuelve supuestamente el crasheo de la aplicacion
+        tvResultado.setText("0");
         /*
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -183,6 +185,8 @@ public class MainActivity extends AppCompatActivity {
         btn0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                /* se añade el metodo toString() porque el metodo getText() devuelve un char secuence, no un String
+                    (https://imgur.com/a/1bD07lp)  */
                 dato=Float.parseFloat(tvResultado.getText().toString());
                 if (dato==0.0f){
                     tvResultado.setText("0");
@@ -198,6 +202,17 @@ public class MainActivity extends AppCompatActivity {
         tvResultado.setText("0");
         dato=0.0f;
         operacion="";
+    }
+
+    public void borrarNumero(View view) {
+        //se declara una variable String para poder utilizar despues el metodo substring().  rb.gy/xwtaue
+        String cadena=(tvResultado.getText().toString());
+        if (cadena.equals("0")){
+            tvResultado.setText("0");
+        }else{
+            cadena=cadena.substring(0, cadena.length() -1 );
+            tvResultado.setText(cadena);
+        }
     }
 
     public void pulsarUno(View view) {
@@ -254,4 +269,6 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
     }
+
+
 }
