@@ -205,7 +205,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void borrarNumero(View view) {
-        //se declara una variable String para poder utilizar despues el metodo substring().  rb.gy/xwtaue
+        //se declara una variable String para poder utilizar despues el metodo substring(). API rb.gy/xwtaue
         String cadena=(tvResultado.getText().toString());
         if (cadena.equals("0")){
             tvResultado.setText("0");
