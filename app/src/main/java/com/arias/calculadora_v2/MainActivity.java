@@ -37,6 +37,11 @@ public class MainActivity extends AppCompatActivity {
     String operacion = "";
     float dato = 0.0f;
     float resultado=0.0f;
+    float res=0.0f;
+
+    //definimos una variable contadorOperadores para ver cuantos botones se han pulsado
+    int contadorOperadores=0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -226,11 +231,21 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void operacionDividir(View view){
-        numero1=Float.parseFloat(tvResultado.getText().toString());
-        /*se resetea el tvResultado paraque se almacene solo a partir de ahora la parte que va
-         despues del operando*/
-        tvResultado.setText("0");
-        operacion="/";
+        if(contadorOperadores==0){
+            //se almacena en una variable el primer operando
+            numero1=Float.parseFloat(tvResultado.getText().toString());
+
+            /*se resetea el tvResultado paraque se almacene solo a partir de ahora la parte que va
+             despues del operando*/
+            tvResultado.setText("0");
+            operacion="/";
+        }else if(contadorOperadores>0){
+            /*resolvemos la operación anterior y el resultado se guardaría en "numero1".
+              parseFloat(): convierte una cadena en float  */
+            res=(Float.parseFloat(tvResultado.getText().toString())+numero1);
+            numero1=res;
+        }
+        contadorOperadores++;
     }
     public void operacionSumar(View view){
         numero1=Float.parseFloat(tvResultado.getText().toString());
