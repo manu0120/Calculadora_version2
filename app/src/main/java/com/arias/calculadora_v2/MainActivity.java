@@ -227,33 +227,65 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void operacionDividir(View view){
-        numero1=Float.parseFloat(tvResultado.getText().toString());
-        /*se resetea el tvResultado paraque se almacene solo a partir de ahora la parte que va
-         despues del operando*/
-        tvResultado.setText("0");
-        operacion="/";
+        if(contadorOperadores==0){
+            numero1=Float.parseFloat(tvResultado.getText().toString());
+            /*se resetea el tvResultado para que se almacene solo a partir de ahora la parte que va
+            despues del operando*/
+            tvResultado.setText("0");
+            operacion="/";
+        }else{
+            numero1=numero1+Float.parseFloat(tvResultado.getText().toString());
+            tvResultado.setText("0");
+            /*se almacena de nuevo el operador por si se pulsa uno diferente al primero*/
+            operacion="/";
+        }
+        contadorOperadores++;
     }
     public void operacionSumar(View view){
         if(contadorOperadores==0){
             numero1=Float.parseFloat(tvResultado.getText().toString());
+            /*se resetea el tvResultado para que se almacene solo a partir de ahora la parte que va
+            despues del operando*/
             tvResultado.setText("0");
             operacion="+";
         }else{
             numero1=numero1+Float.parseFloat(tvResultado.getText().toString());
             tvResultado.setText("0");
+            /*se almacena de nuevo el operador por si se pulsa uno diferente al primero*/
+            operacion="+";
         }
         contadorOperadores++;
 
     }
     public void operacionMultiplicar(View view){
-        numero1=Float.parseFloat(tvResultado.getText().toString());
-        tvResultado.setText("0");
-        operacion="*";
+        if(contadorOperadores==0){
+            numero1=Float.parseFloat(tvResultado.getText().toString());
+            /*se resetea el tvResultado para que se almacene solo a partir de ahora la parte que va
+            despues del operando*/
+            tvResultado.setText("0");
+            operacion="*";
+        }else{
+            numero1=numero1+Float.parseFloat(tvResultado.getText().toString());
+            tvResultado.setText("0");
+            /*se almacena de nuevo el operador por si se pulsa uno diferente al primero*/
+            operacion="*";
+        }
+        contadorOperadores++;
     }
     public void operacionRestar(View view){
-        numero1=Float.parseFloat(tvResultado.getText().toString());
-        tvResultado.setText("0");
-        operacion="-";
+        if(contadorOperadores==0){
+            numero1=Float.parseFloat(tvResultado.getText().toString());
+            /*se resetea el tvResultado para que se almacene solo a partir de ahora la parte que va
+            despues del operando*/
+            tvResultado.setText("0");
+            operacion="-";
+        }else{
+            numero1=numero1+Float.parseFloat(tvResultado.getText().toString());
+            tvResultado.setText("0");
+            /*se almacena de nuevo el operador por si se pulsa uno diferente al primero*/
+            operacion="-";
+        }
+        contadorOperadores++;
     }
     public void operacionIgual(View view){
         contadorOperadores=0;
