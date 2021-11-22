@@ -305,5 +305,16 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="427dp" />
 
+    <Switch
+        android:id="@+id/swNigthMode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Modo oscuro"
+        app:layout_constraintEnd_toEndOf="@id/guidelinev5"
+        app:layout_constraintTop_toBottomOf="@id/guidelineh6"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
